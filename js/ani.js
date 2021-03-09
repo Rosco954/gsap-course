@@ -1,5 +1,16 @@
 let tl = gsap.timeline()
-tl.fromTo('.logo', {
+tl.fromTo('.heading', {
+    opacity:0,
+    x: -500,
+},
+{
+    x: 0,
+    opacity: 1,
+    duration: .6,
+    ease: 'power2',
+},
+)
+.fromTo('.logo', {
     x: -200,
     opacity: 0
 },
@@ -8,7 +19,9 @@ tl.fromTo('.logo', {
     opacity: 1,
     delay: 0.2,
     duration: 1
-})
+},
+'>-0.6'
+)
 .fromTo('.menu', {
     x: 200,
     opacity: 0,
