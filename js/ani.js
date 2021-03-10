@@ -1,3 +1,4 @@
+//animations-index-header
 
     let tl = gsap.timeline()
     tl.fromTo('.heading', {
@@ -128,3 +129,59 @@
     },
     '>-2'
     );
+//scrollmagic
+
+const tlServicesScroll = new gsap.timeline();
+
+tlServicesScroll.fromTo('#main-services',{
+    x:'100%'
+},{
+    x: 0
+})
+
+const serviceElement = document.querySelector('#main-services');
+
+let homeController = new ScrollMagic.Controller();
+
+let serviceScene = new ScrollMagic.Scene({
+    triggerElement: '#main-services',
+    triggerHook: .9,
+    reverse: false,
+    duration: 600
+})
+.setTween(tlServicesScroll)
+.addIndicators()
+.addTo(homeController);
+
+const tlServicesRevealed = new gsap.timeline();
+
+tlServicesRevealed.fromTo('.services-heading', {
+    opacity: 0,
+    scale: 0.2,
+    y: -100
+}, 
+{
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    ease: 'power2.inOut'
+})
+.fromTo('.service', {
+    opacity: 0,
+    scale: 0.2,
+    y: -100
+},
+{
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    ease: 'power2.inOut',
+    stagger: 0.5
+})
+
+let servicesRevealed = new ScrollMagic.Scene({
+    triggerElement: '#main-services',
+})
+.setTween(tlServicesRevealed)
+.addIndicators()
+.addTo(homeController);

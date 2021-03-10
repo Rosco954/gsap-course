@@ -15,7 +15,7 @@ body {
     #4b16f0,
     #2512eb
   );
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 header {
   color: white;
@@ -58,7 +58,7 @@ header .menu li a {
 }
 .container {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 400px;
 }
 #home {
   height: calc(100vh - 90px);
@@ -161,4 +161,55 @@ header .menu li a {
   transform: translate3d(0px, 300px, 0);
   border: 1px dashed white;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/*Scroll Sections*/
+
+#main-services {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-services .black-bg {
+  background-color: black;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-services h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+
+#main-services .services {
+  margin: 50px 0 0;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 1200px;
+  width: 80%;
+}
+
+#main-services .services .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+#test {
+  background-color: blueviolet;
+  height: 100vh;
 }
