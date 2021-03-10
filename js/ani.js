@@ -150,7 +150,6 @@ let serviceScene = new ScrollMagic.Scene({
     duration: 600
 })
 .setTween(tlServicesScroll)
-.addIndicators()
 .addTo(homeController);
 
 const tlServicesRevealed = new gsap.timeline();
@@ -183,5 +182,4 @@ let servicesRevealed = new ScrollMagic.Scene({
     triggerElement: '#main-services',
 })
 .setTween(tlServicesRevealed)
-.addIndicators()
 .addTo(homeController);
