@@ -13,12 +13,12 @@ const app = express();
 
 // Create a middleware to handle the serving of the app.
 // We are using this root directory, "/", to serve all of our files in the public folder, "/public".
-app.use("/", serveStatic(path.join(__dirname, "/public")));
+app.use("/", serveStatic(path.join(__dirname, "/")));
 
 // Serve index by default.
 // We have this route that is basically there by default.  The root directory by default is going to the index.html, which is the file we have inside the public folder.
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 // Create default port to serve the app on.
